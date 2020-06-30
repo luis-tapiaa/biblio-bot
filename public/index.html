@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Botkit Anywhere</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+        <script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body >
+      <div class="wrapper">
+
+        <div id="message_window">
+            <div class="disconnected">
+                Desconectado... reconectando!
+            </div>
+            <div class="offline">
+                Offline! Recarga para reconectar.
+            </div>
+            <section>
+                <div id="message_list">                    
+                </div>
+            </section>
+            <div id="message_replies">
+            </div>
+            <footer>
+                <form onsubmit="Botkit.send(Botkit.input.value, event)">
+                    <button onclick="recognition.start()" id="speech" type="button"><i class="fa fa-microphone"></i></button>
+                    <input type="text" autocomplete="off" id="messenger_input" placeholder="Aa" />
+                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                </form>
+            </footer>
+        </div>
+        </div>
+        <script src="/client.js"></script>
+        <script src="/src/render.js"></script>
+        <script src="/src/recognition.js"></script>
+        <script src="/src/voice.js"></script>
+    </body>
+</html>
