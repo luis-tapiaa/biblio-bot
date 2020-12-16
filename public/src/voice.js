@@ -16,6 +16,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 var count = 0;
 
 function speak(text) {
+  /*
 
   if (text) {
     var utterThis = new SpeechSynthesisUtterance(text);
@@ -34,7 +35,7 @@ function speak(text) {
     } else {
       queue.push(utterThis);
     }
-  }
+  }*/
 }
 
 window.onbeforeunload = function () {
